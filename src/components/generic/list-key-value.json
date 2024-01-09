@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_generic_list_key_values",
+  "info": {
+    "displayName": "List Key Value",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  }
+}
