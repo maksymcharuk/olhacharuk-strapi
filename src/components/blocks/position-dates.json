@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blocks_position_dates",
+  "info": {
+    "displayName": "Position Dates",
+    "icon": "calendar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "start": {
+      "type": "date"
+    },
+    "end": {
+      "type": "date"
+    },
+    "until_now": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

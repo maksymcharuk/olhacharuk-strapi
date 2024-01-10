@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_projects",
+  "info": {
+    "displayName": "Project",
+    "icon": "archive",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "company": {
+      "type": "string"
+    },
+    "positions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.position-dates"
+    },
+    "location": {
+      "type": "string"
+    }
+  }
+}

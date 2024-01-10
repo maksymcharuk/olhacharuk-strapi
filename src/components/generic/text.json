@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_generic_texts",
+  "info": {
+    "displayName": "Text",
+    "icon": "feather",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    }
+  }
+}

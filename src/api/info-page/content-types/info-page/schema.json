@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "info_pages",
+  "info": {
+    "singularName": "info-page",
+    "pluralName": "info-pages",
+    "displayName": "Info Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "blocks"
+    },
+    "published_work": {
+      "type": "component",
+      "repeatable": true,
+      "component": "generic.link"
+    },
+    "clients": {
+      "displayName": "Text",
+      "type": "component",
+      "repeatable": true,
+      "component": "generic.text"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "generic.link"
+    },
+    "experience": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.project"
+    }
+  }
+}
