@@ -869,6 +869,40 @@ export interface ApiProjectProject extends Schema.CollectionType {
   };
 }
 
+export interface ApiWorkPageWorkPage extends Schema.SingleType {
+  collectionName: 'work_pages';
+  info: {
+    singularName: 'work-page';
+    pluralName: 'work-pages';
+    displayName: 'Work Page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    projects: Attribute.Relation<
+      'api::work-page.work-page',
+      'oneToMany',
+      'api::project.project'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::work-page.work-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::work-page.work-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -890,6 +924,7 @@ declare module '@strapi/types' {
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::info-page.info-page': ApiInfoPageInfoPage;
       'api::project.project': ApiProjectProject;
+      'api::work-page.work-page': ApiWorkPageWorkPage;
     }
   }
 }
