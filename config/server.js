@@ -1,7 +1,7 @@
 module.exports = ({ env }) => ({
   host: env('HOST', '0.0.0.0'),
   port: env.int('PORT', 1337),
-  url: 'http://159.203.96.116/api',
+  url: 'http://159.203.96.116',
   admin: {
     url: 'http://159.203.96.116/dashboard',
     auth: {
