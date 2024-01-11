@@ -5,7 +5,7 @@ module.exports = ({ env }) => ({
   admin: {
     url: 'http://159.203.96.116/dashboard',
     auth: {
-      secret: "enter-your-jwt-here",
+      secret: env('JWT_SECRET', undefined)
     },
   },
   app: {
