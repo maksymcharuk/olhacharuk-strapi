@@ -834,6 +834,37 @@ export interface ApiInfoPageInfoPage extends Schema.SingleType {
   };
 }
 
+export interface ApiPasswordPassword extends Schema.CollectionType {
+  collectionName: 'passwords';
+  info: {
+    singularName: 'password';
+    pluralName: 'passwords';
+    displayName: 'Password';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    password: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::password.password',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::password.password',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiProjectProject extends Schema.CollectionType {
   collectionName: 'projects';
   info: {
@@ -925,6 +956,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::info-page.info-page': ApiInfoPageInfoPage;
+      'api::password.password': ApiPasswordPassword;
       'api::project.project': ApiProjectProject;
       'api::work-page.work-page': ApiWorkPageWorkPage;
     }
