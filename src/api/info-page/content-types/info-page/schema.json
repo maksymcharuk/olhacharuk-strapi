@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "description": {
-      "type": "blocks"
+      "type": "blocks",
+      "required": true
     },
     "published_work": {
       "type": "component",

@@ -13,12 +13,13 @@
   "pluginOptions": {},
   "attributes": {
     "description": {
-      "type": "blocks"
+      "type": "blocks",
+      "required": true
     },
     "images": {
       "type": "media",
       "multiple": true,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -27,7 +28,8 @@
       ]
     },
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "links": {
       "type": "component",
@@ -37,7 +39,8 @@
     "details": {
       "type": "component",
       "repeatable": true,
-      "component": "generic.list-key-value"
+      "component": "generic.list-key-value",
+      "required": true
     },
     "company": {
       "type": "string"

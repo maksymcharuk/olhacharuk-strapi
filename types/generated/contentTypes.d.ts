@@ -774,12 +774,13 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     singularName: 'home-page';
     pluralName: 'home-pages';
     displayName: 'Home Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    content: Attribute.Blocks;
+    content: Attribute.Blocks & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -810,7 +811,7 @@ export interface ApiInfoPageInfoPage extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    description: Attribute.Blocks;
+    description: Attribute.Blocks & Attribute.Required;
     published_work: Attribute.Component<'generic.link', true>;
     clients: Attribute.Component<'generic.text', true>;
     links: Attribute.Component<'generic.link', true>;
@@ -845,11 +846,12 @@ export interface ApiProjectProject extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    description: Attribute.Blocks;
-    images: Attribute.Media;
-    name: Attribute.String;
+    description: Attribute.Blocks & Attribute.Required;
+    images: Attribute.Media & Attribute.Required;
+    name: Attribute.String & Attribute.Required;
     links: Attribute.Component<'generic.link', true>;
-    details: Attribute.Component<'generic.list-key-value', true>;
+    details: Attribute.Component<'generic.list-key-value', true> &
+      Attribute.Required;
     company: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
