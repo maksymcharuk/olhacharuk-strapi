@@ -37,7 +37,7 @@ const ShareButton = () => {
     const tr = getParentEl(checkedInput[0], "tr");
     tr.querySelectorAll("td").forEach((td, i) => {
       if (i === passwordColumnIndex) {
-        setContent(`${origin}/work?p=${td.textContent.trim()}`);
+        setContent(`${origin}?p=${td.textContent.trim()}`);
         return;
       }
     });
