@@ -914,6 +914,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     details: Attribute.Component<'generic.list-key-value', true> &
       Attribute.Required;
     company: Attribute.String;
+    slug: Attribute.UID<'api::project.project', 'name'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

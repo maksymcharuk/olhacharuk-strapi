@@ -44,6 +44,11 @@
     },
     "company": {
       "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
     }
   }
 }

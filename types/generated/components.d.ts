@@ -26,6 +26,7 @@ export interface BlocksProject extends Schema.Component {
     company: Attribute.String;
     positions: Attribute.Component<'blocks.position-dates', true>;
     location: Attribute.String;
+    slug: Attribute.String & Attribute.Required & Attribute.Unique;
   };
 }
 
