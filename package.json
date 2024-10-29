@@ -6,8 +6,9 @@
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
-    "build": "strapi build",
-    "deploy-production": "npm run build && scp -r ./build/* root@159.203.96.116:/var/www/olhacharuk.com/strapi/build",
+    "build": "dotenv -e .env.production -- npm run build:local",
+    "build:local": "strapi build",
+    "deploy-production": "./deploy.sh",
     "strapi": "strapi"
   },
   "dependencies": {
@@ -33,5 +34,8 @@
     "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "dotenv-cli": "^7.4.2"
+  }
 }
