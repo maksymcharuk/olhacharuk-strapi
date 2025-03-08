@@ -915,6 +915,8 @@ export interface ApiProjectProject extends Schema.CollectionType {
       Attribute.Required;
     company: Attribute.String;
     slug: Attribute.UID<'api::project.project', 'name'> & Attribute.Required;
+    images_grid: Attribute.Media & Attribute.Required;
+    description_short: Attribute.RichText & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
